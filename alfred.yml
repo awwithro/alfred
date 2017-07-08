@@ -35,7 +35,7 @@ commit:
         git status
         git add .
         git commit
-        git push origin master
+        git push origin v2
     exit: 42
 
 verification:
@@ -47,8 +47,8 @@ verification:
 dockerize:
     summary: Dockerize alfred
     command: |
-        docker build -t kcmerrill/alfred .
+        docker build -t kcmerrill/alfred:2.0 .
 
 docker.push:
     summary: Push kcmerrill/alfred to dockerhub
-    command: docker push kcmerrill/alfred
+    command: docker push kcmerrill/alfred:2.0
